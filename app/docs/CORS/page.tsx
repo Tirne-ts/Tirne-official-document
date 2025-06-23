@@ -8,7 +8,7 @@ import { Blockquote } from "../../../components/Document/Blockquote"
 export default function CORSMiddlewarePage() {
   return (
     <div className="max-w-3xl mx-auto py-12 px-4">
-      <DocSection title="🌐 CORS Middleware — Cross-Origin Resource Sharing">
+      <DocSection title="🌐 CORS Middleware "subtitle='Cross-Origin Resource Sharing'>
         <p>
           This example shows how to enable CORS for specific origins using <code>createCORS()</code>. It handles both standard and preflight requests for secure and compliant cross-origin API access.
         </p>

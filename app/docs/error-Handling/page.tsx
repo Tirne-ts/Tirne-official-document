@@ -5,7 +5,6 @@ import { CodeBlock } from "../../../components/Document/CodeBlock"
 import { Blockquote } from "../../../components/Document/Blockquote"
 import { Callout } from "../../../components/Document/Callout"
 import React from 'react'
-import { NextPrevNav } from "@/components/Document/NextPrevNav"
 
 export default function ErrorHandlingPage() {
   return (
@@ -92,7 +91,7 @@ export default {
           You don&apos;t “handle” errors — you **declare** them.
         </Blockquote>
       </DocSection>
-      <NextPrevNav />
+
 
     </div>
   )

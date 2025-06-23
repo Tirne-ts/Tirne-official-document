@@ -6,12 +6,11 @@ import { Blockquote } from '@/components/Document/Blockquote'
 import { FeatureTable } from '@/components/Document/FeatureTable'
 import { CodeBlock } from '@/components/Document/CodeBlock'
 import { Callout } from '@/components/Document/Callout'
-import { NextPrevNav } from '@/components/Document/NextPrevNav'
 export default function IntroductionPage() {
   return (
     <div className="max-w-3xl mx-auto py-12 px-4">
       {/* セクション 1 */}
-      <DocSection title="🧭 Introduction — What is Tirne?">
+      <DocSection title="What is Tirne?" subtitle=''>
         <p>
           <span className="font-semibold text-gray-900 dark:text-white">Tirne</span> is a minimal, type‑safe web framework for <em>multi‑runtime edge environments</em> — born for Bun, Workers, and Deno. Unlike traditional backend frameworks, Tirne treats <span className="font-semibold">structure as the source of truth</span>, and <span className="font-semibold">side effects as first‑class citizens</span>.
         </p>
@@ -147,8 +146,7 @@ export default {
         </Callout>
       </DocSection>
 
-      {/* Next/Prev */}
-      <NextPrevNav />
+
     </div>
   )
 }

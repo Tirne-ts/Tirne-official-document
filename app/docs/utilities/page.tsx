@@ -8,7 +8,7 @@ import { Blockquote } from "../../../components/Document/Blockquote"
 export default function UtilitiesPage() {
   return (
     <div className="max-w-3xl mx-auto py-12 px-4">
-      <DocSection title="🧰 Utilities — Minimal API Helpers">
+      <DocSection title="🧰 Utilities"subtitle='Minimal API Helpers'>
         <p>
           Tirne doesn&apos;t ship batteries-included utilities — but writing them is trivial. Here are <strong>4 tiny but powerful functions</strong> to help you build faster.
         </p>

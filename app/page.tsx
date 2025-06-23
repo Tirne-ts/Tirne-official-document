@@ -1,21 +1,40 @@
-'use client'
+// app/page.tsx ← "use client" は不要（Server Component）
 
-import { useEffect, useState } from 'react'
 import { Hero } from '@/components/ui/Hero'
 import { BenchmarkCards } from '@/components/ui/BenchmarkCards'
 import { CTA } from '@/components/ui/CTA'
 import { CodeTabs } from '@/components/ui/CodeTabs'
 import { PhilosophyCards } from '@/components/ui/PhilosophyCards'
+import { CodeBlock } from "../components/Document/CodeBlock"
+import { DocSection } from '@/components/Document/ DocSection'
+import { Callout } from '@/components/Document/Callout'
 
-export default function Home() {
-  const [starCount, setStarCount] = useState<number | null>(null)
+export const revalidate = 3600 // ISR風：1時間ごとに再取得
 
-  useEffect(() => {
-    fetch('https://api.github.com/repos/Tirne-ts/Tirne')
-      .then((res) => res.json())
-      .then((data) => setStarCount(data.stargazers_count))
-      .catch(() => setStarCount(null))
-  }, [])
+export async function generateMetadata() {
+  return {
+    title: 'Tirne - Zero-Boilerplate Framework',
+    description: 'Structure over boilerplate. Tirne is a zero-config framework running on Bun, Workers and beyond.',
+    openGraph: {
+      title: 'Tirne Framework',
+      description: 'Zero-boilerplate, edge-native, and damn fast.',
+      url: 'https://your-site.com',
+    },
+  }
+}
+
+export default async function Home() {
+  let starCount: number | null = null
+
+  try {
+    const res = await fetch('https://api.github.com/repos/Tirne-ts/Tirne', {
+      next: { revalidate: 3600 },
+    })
+    const data = await res.json()
+    starCount = data.stargazers_count
+  } catch {
+    starCount = null
+  }
 
   return (
     <div className="space-y-6 px-6 md:px-12 py-4">
@@ -24,15 +43,14 @@ export default function Home() {
         subtitle="Structure over boilerplate. Tirne is a zero-boilerplate, Bun and Workers framework."
         starCount={starCount ?? undefined}
         buttons={[
-          { label: 'Get Started', href: '/docs/getting-started' },
           { label: 'Star on GitHub', href: 'https://github.com/Tirne-ts/Tirne' },
+          { label: 'Get Started', href: '/docs/getting-started' },
           { label: 'Documentation', href: '/docs/introduction' }
-
         ]}
       />
 
       <CodeTabs
-      title="Tirne Code Examples"
+        title="Tirne Code Examples"
         tabs={[
           {
             title: 'Tirne',
@@ -88,6 +106,18 @@ const routes: Route[] = [
           },
         ]}
       />
+
+      <DocSection title="⚡️ Quickstart">
+        <div className='max-w-2xl mx-auto'>
+          <CodeBlock language="bash">{`npx create-tirne-app my-app
+cd my-app
+npm install
+npm run dev`}</CodeBlock>
+          <Callout type="info">
+            API will be ready at <code>http://localhost:3000</code> instantly.
+          </Callout>
+        </div>
+      </DocSection>
 
       <BenchmarkCards
         title="Tirne Performance"

@@ -8,7 +8,7 @@ import { Blockquote } from "../../../components/Document/Blockquote"
 export default function AuthMiddlewarePage() {
   return (
     <div className="max-w-3xl mx-auto py-12 px-4">
-      <DocSection title="🔐 Auth Middleware — Token Validation via Cookie or Header">
+      <DocSection title="🔐 Auth Middleware" subtitle='Token Validation via Cookie or Header'>
         <p>
           This example shows how to protect routes using a custom <code>createAuth()</code> middleware.
           After logging in via <code>/login</code>, the server sets a JWT token as a cookie. You can also send the token manually using an <code>Authorization</code> header.

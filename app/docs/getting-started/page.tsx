@@ -4,7 +4,6 @@ import { CodeBlock } from "../../../components/Document/CodeBlock"
 import { FeatureTable } from "../../../components/Document/FeatureTable"
 import { Blockquote } from "../../../components/Document/Blockquote"
 import { Callout } from "../../../components/Document/Callout"
-import { NextPrevNav } from "../../../components/Document/NextPrevNav"
 import React from 'react'
 
 export default function GettingStartedPage() {
@@ -103,7 +102,6 @@ export default {
         </ul>
       </DocSection>
 
-      <NextPrevNav />
     </div>
   )
 }

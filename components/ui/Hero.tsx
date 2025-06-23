@@ -20,7 +20,7 @@ export function Hero({ title, subtitle, buttons, starCount }: HeroProps) {
       <div className="max-w-3xl mx-auto px-6">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6">{title}</h1>
         <p className="text-muted-foreground text-lg mb-16">{subtitle}</p>
-        <div className="flex justify-center gap-12 flex-wrap">
+<div className="flex flex-col sm:flex-row justify-center items-center gap-4">
           {buttons.map((btn, idx) => (
             <Button key={idx} asChild>
               <a href={btn.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">

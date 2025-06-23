@@ -8,7 +8,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body>
         <Providers>
-          {children}
+          <div className='flex-1 p-4 sm:p-6 md:p-10 max-w-screen-lg w-full mx-auto'> {children}</div>
+         
         </Providers>
       </body>
     </html>

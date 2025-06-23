@@ -8,7 +8,7 @@ import { Blockquote } from "../../../components/Document/Blockquote"
 export default function RateLimitMiddlewarePage() {
   return (
     <div className="max-w-3xl mx-auto py-12 px-4">
-      <DocSection title="🚦 Rate Limit Middleware — Prevent Abuse & Overload">
+      <DocSection title="🚦 Rate Limit Middleware " subtitle='Prevent Abuse & Overload'>
         <p>
           This example demonstrates how to apply a simple <strong>rate-limiting middleware</strong> using <code>rateLimit()</code>. It limits each client to a maximum number of requests per time window.
         </p>
