@@ -15,7 +15,7 @@ const DOC_ENTRIES = [
   'auth-Middleware',
   'cookieAuth-Middleware',
   'CORS',
-  'routing',
+  'dynamic-Routes',
   'utilities',
   'error-Handling',
 ]
