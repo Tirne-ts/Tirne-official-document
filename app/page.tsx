@@ -9,32 +9,21 @@ import { CodeBlock } from "../components/Document/CodeBlock"
 import { DocSection } from '@/components/Document/ DocSection'
 import { Callout } from '@/components/Document/Callout'
 
-export const revalidate = 3600 // ISR風：1時間ごとに再取得
-
-export async function generateMetadata() {
-  return {
-    title: 'Tirne - Zero-Boilerplate Framework',
-    description: 'Structure over boilerplate. Tirne is a zero-config framework running on Bun, Workers and beyond.',
-    openGraph: {
-      title: 'Tirne Framework',
-      description: 'Zero-boilerplate, edge-native, and damn fast.',
-      url: 'https://your-site.com',
-    },
+// ⭐ ビルド時にGitHub APIを叩く（＝完全静的化）
+async function fetchStarCount(): Promise<number | null> {
+  try {
+    const res = await fetch('https://api.github.com/repos/Tirne-ts/Tirne', {
+      headers: { 'Accept': 'application/vnd.github+json' },
+    })
+    const data = await res.json()
+    return data.stargazers_count
+  } catch {
+    return null
   }
 }
 
 export default async function Home() {
-  let starCount: number | null = null
-
-  try {
-    const res = await fetch('https://api.github.com/repos/Tirne-ts/Tirne', {
-      next: { revalidate: 3600 },
-    })
-    const data = await res.json()
-    starCount = data.stargazers_count
-  } catch {
-    starCount = null
-  }
+  const starCount = await fetchStarCount()
 
   return (
     <div className="space-y-6 px-6 md:px-12 py-4">
@@ -45,7 +34,7 @@ export default async function Home() {
         buttons={[
           { label: 'Star on GitHub', href: 'https://github.com/Tirne-ts/Tirne' },
           { label: 'Get Started', href: '/docs/getting-started' },
-          { label: 'Documentation', href: '/docs/introduction' }
+          { label: 'Documentation', href: '/docs/introduction' },
         ]}
       />
 
