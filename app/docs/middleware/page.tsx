@@ -4,6 +4,7 @@ import { DocSection } from '@/components/Document/ DocSection'
 import { Blockquote } from '@/components/Document/Blockquote'
 import { CodeBlock } from '@/components/Document/CodeBlock'
 import { Callout } from '@/components/Document/Callout'
+import { NextPrevNav } from '@/components/Document/NextPrevNav'
 
 export default function MiddlewarePage() {
   return (
@@ -90,6 +91,7 @@ server.use(logger); // applies to all routes`}</CodeBlock>
           Middleware in Tirne isn’t a “plugin system” — it’s a clean execution model.
         </Blockquote>
       </DocSection>
+      <NextPrevNav />
 
     </div>
   )
