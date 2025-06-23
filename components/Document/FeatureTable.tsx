@@ -4,7 +4,7 @@ interface Row {
   feature: string
   tirne: string
   hono: string
-  next: string
+  next?:string
 }
 
 export function FeatureTable({ rows }: { rows: Row[] }) {

@@ -8,7 +8,7 @@ export function DocsSearch() {
   const [q, setQ] = useState('')
 
   const filtered = docsPages.filter(
-    (p) => p.title.toLowerCase().includes(q.toLowerCase()) || p.summary?.toLowerCase().includes(q.toLowerCase())
+    (p) => p.title.toLowerCase().includes(q.toLowerCase())
   )
 
   return (
