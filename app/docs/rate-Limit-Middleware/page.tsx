@@ -19,9 +19,8 @@ export default function RateLimitMiddlewarePage() {
       </DocSection>
 
       <DocSection title="🔧 Example Code">
-        <CodeBlock language="ts">{`import { Server, Route } from "./src/server";
-import { json } from "./src/util";
-import { rateLimit } from "./src/middleware/rateLimit";
+        <CodeBlock language="ts">{`import { Server, json, rateLimit} from "tirne";
+import type { Route } from "tirne";
 
 const limiter = rateLimit({
   windowMs: 60_000, // 1 minute window

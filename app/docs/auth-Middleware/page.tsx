@@ -20,11 +20,9 @@ export default function AuthMiddlewarePage() {
       </DocSection>
 
       <DocSection title="🔧 Example Code">
-        <CodeBlock language="ts">{`import { Server, Route } from "./src/server";
-import { json } from "./src/util";
-import { createAuth } from "./src/middleware/auth";
-import { generateToken } from "./src/auth/token";
-import { setCookie } from "./src/cookie";
+        <CodeBlock language="ts">{`import type { Route } from "tirne";
+import { Server,createAuth,json,generateToken,setCookie } from "tirne";
+
 
 const SECRET = "super-secret-key";
 

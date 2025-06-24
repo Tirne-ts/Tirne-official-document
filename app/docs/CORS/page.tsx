@@ -19,9 +19,8 @@ export default function CORSMiddlewarePage() {
       </DocSection>
 
       <DocSection title="🔧 Example Code">
-        <CodeBlock language="ts">{`import { Server, Route } from "./src/server";
-import { json } from "./src/util";
-import { createCORS } from "./src/middleware/cors";
+        <CodeBlock language="ts">{`import type { Route } from "tirne";
+import { Server,createCORS,json } from "tirne";
 
 const cors = createCORS({
   origin: ["https://example.com", "https://admin.example.com"],
