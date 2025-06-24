@@ -7,18 +7,6 @@ import { Callout } from "../../../components/Document/Callout"
 import React from 'react'
 export const dynamic = 'force-static' // ← 完全SSG指定（Cloudflare向け）
 
-export async function generateMetadata() {
-  return {
-    title: 'Error Handling | Tirne',
-    description: 'How to handle errors in Tirne, the zero-boilerplate framework built for Bun, Deno and Workers.',
-    keywords: ['Tirne', 'error handling', 'Bun framework', 'Cloudflare Workers'],
-    openGraph: {
-      title: 'Error Handling with Tirne',
-      description: 'How to handle errors in Tirne, the modern edge-native framework.',
-      url: 'https://tirne.dev/docs/error-Handling',
-    },
-  }
-}
 export default function ErrorHandlingPage() {
   return (
     <div className="max-w-3xl mx-auto py-12 px-4">

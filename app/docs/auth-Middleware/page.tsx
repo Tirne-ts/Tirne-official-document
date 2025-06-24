@@ -6,18 +6,6 @@ import { CodeBlock } from "../../../components/Document/CodeBlock"
 import { Blockquote } from "../../../components/Document/Blockquote"
 export const dynamic = 'force-static' // ← 完全SSG指定（Cloudflare向け）
 
-export async function generateMetadata() {
-  return {
-    title: 'auth-Middleware | Tirne',
-    description: 'Learn how to set up and use auth-Middleware in Tirne, the zero-boilerplate framework built for Bun, Deno and Workers.',
-    keywords: ['Tirne', 'auth-Middleware', 'Bun framework', 'Cloudflare Workers'],
-    openGraph: {
-      title: 'auth-Middleware with Tirne',
-      description: 'How to start building with auth-Middleware in Tirne, the modern edge-native framework.',
-      url: 'https://tirne.dev/docs/auth-Middleware',
-    },
-  }
-}
 
 export default function AuthMiddlewarePage() {
   return (

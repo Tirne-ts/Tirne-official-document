@@ -6,18 +6,7 @@ import { CodeBlock } from "../../../components/Document/CodeBlock"
 import { Blockquote } from "../../../components/Document/Blockquote"
 export const dynamic = 'force-static' // ← 完全SSG指定（Cloudflare向け）
 
-export async function generateMetadata() {
-  return {
-    title: 'utilities | Tirne',
-    description: 'Learn how to  use Tirne utilities, the zero-boilerplate framework built for Bun, Deno and Workers.',
-    keywords: ['Tirne', 'utilities', 'Bun framework', 'Cloudflare Workers'],
-    openGraph: {
-      title: 'utilities with Tirne',
-      description: 'How to use  Tirne utilities, the modern edge-native framework.',
-      url: 'https://tirne.dev/docs/utilities',
-    },
-  }
-}
+
 
 export default function UtilitiesPage() {
   return (

@@ -6,18 +6,7 @@ import { CodeBlock } from "../../../components/Document/CodeBlock"
 import { Blockquote } from "../../../components/Document/Blockquote"
 export const dynamic = 'force-static' // ← 完全SSG指定（Cloudflare向け）
 
-export async function generateMetadata() {
-  return {
-    title: 'Dynamic Routes | Tirne',
-    description: 'Learn how to set up and use dynamic routes in Tirne, the zero-boilerplate framework built for Bun, Deno and Workers.',
-    keywords: ['Tirne', 'Dynamic Routes', 'Bun framework', 'Cloudflare Workers'],
-    openGraph: {
-      title: 'Dynamic Routes with Tirne',
-      description: 'How to start building with dynamic routes in Tirne, the modern edge-native framework.',
-      url: 'https://tirne.dev/docs/dynamic-Routes',
-    },
-  }
-}
+
 export default function DynamicRoutesPage() {
   return (
     <div className="max-w-3xl mx-auto py-12 px-4">

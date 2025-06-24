@@ -6,18 +6,6 @@ import { CodeBlock } from "../../../components/Document/CodeBlock"
 import { Blockquote } from "../../../components/Document/Blockquote"
 export const dynamic = 'force-static' // ← 完全SSG指定（Cloudflare向け）
 
-export async function generateMetadata() {
-  return {
-    title: 'CORS | Tirne',
-    description: 'Learn how to set up and use CORS in Tirne, the zero-boilerplate framework built for Bun, Deno and Workers.',
-    keywords: ['Tirne', 'CORS', 'Bun framework', 'Cloudflare Workers'],
-    openGraph: {
-      title: 'CORS with Tirne',
-      description: 'How to start building with CORS in Tirne, the modern edge-native framework.',
-      url: 'https://tirne.dev/docs/CORS',
-    },
-  }
-}
 
 export default function CORSMiddlewarePage() {
   return (
