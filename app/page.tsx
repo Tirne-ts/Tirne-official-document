@@ -8,6 +8,25 @@ import { PhilosophyCards } from '@/components/ui/PhilosophyCards'
 import { CodeBlock } from "../components/Document/CodeBlock"
 import { DocSection } from '@/components/Document/ DocSection'
 import { Callout } from '@/components/Document/Callout'
+export async function generateMetadata() {
+  return {
+    title: 'Tirne — Bun・Workers対応のZero-Boilerplate Framework',
+    description: 'Structure over boilerplate. Tirne is an edge-native web framework built for Bun, Cloudflare Workers, and Deno.',
+    keywords: ['tirne', 'bun', 'cloudflare workers', 'Backend Framework', 'zero-boilerplate framework'],
+    openGraph: {
+      title: 'Tirne',
+      description: 'Structure over boilerplate. Edge-native framework for modern web.',
+      url: 'https://tirne.dev',
+      siteName: 'Tirne',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Tirne Framework',
+      description: 'Runs on Bun and Cloudflare Workers. Boilerplate-free and blazing fast.',
+    }
+  }
+}
 
 // ⭐ ビルド時にGitHub APIを叩く（＝完全静的化）
 async function fetchStarCount(): Promise<number | null> {

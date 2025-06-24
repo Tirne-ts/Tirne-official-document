@@ -5,6 +5,20 @@ import { FeatureTable } from "../../../components/Document/FeatureTable"
 import { Blockquote } from "../../../components/Document/Blockquote"
 import { Callout } from "../../../components/Document/Callout"
 import React from 'react'
+export const dynamic = 'force-static' // ← 完全SSG指定（Cloudflare向け）
+
+export async function generateMetadata() {
+  return {
+    title: 'Getting Started | Tirne',
+    description: 'Learn how to set up and use Tirne, the zero-boilerplate framework built for Bun, Deno and Workers.',
+    keywords: ['Tirne', 'Getting Started', 'Bun framework', 'Cloudflare Workers'],
+    openGraph: {
+      title: 'Getting Started with Tirne',
+      description: 'How to start building with Tirne, the modern edge-native framework.',
+      url: 'https://tirne.dev/docs/getting-started',
+    },
+  }
+}
 
 export default function GettingStartedPage() {
   return (

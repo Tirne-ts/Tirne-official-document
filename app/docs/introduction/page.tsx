@@ -6,6 +6,21 @@ import { Blockquote } from '@/components/Document/Blockquote'
 import { FeatureTable } from '@/components/Document/FeatureTable'
 import { CodeBlock } from '@/components/Document/CodeBlock'
 import { Callout } from '@/components/Document/Callout'
+export const dynamic = 'force-static' // ← 完全SSG指定（Cloudflare向け）
+
+export async function generateMetadata() {
+  return {
+    title: 'introduction | Tirne',
+    description: 'introduction Tirne, the zero-boilerplate framework built for Bun, Deno and Workers.',
+    keywords: ['Tirne', 'introduction', 'Bun framework', 'Cloudflare Workers'],
+    openGraph: {
+      title: 'introduction with Tirne',
+      description: 'introduction with Tirne, the modern edge-native framework.',
+      url: 'https://tirne.dev/docs/introduction',
+    },
+  }
+}
+
 export default function IntroductionPage() {
   return (
     <div className="max-w-3xl mx-auto py-12 px-4">
