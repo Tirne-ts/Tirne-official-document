@@ -4,20 +4,7 @@ import React from 'react'
 import { DocSection } from "../../../components/Document/ DocSection"
 import { CodeBlock } from "../../../components/Document/CodeBlock"
 import { Blockquote } from "../../../components/Document/Blockquote"
-export const dynamic = 'force-static' // ← 完全SSG指定（Cloudflare向け）
 
-export async function generateMetadata() {
-  return {
-    title: 'rate-Limit-Middleware | Tirne',
-    description: 'Learn how to set up and use rate limit middleware in Tirne, the zero-boilerplate framework built for Bun, Deno and Workers.',
-    keywords: ['Tirne', 'rate limit', 'Bun framework', 'Cloudflare Workers'],
-    openGraph: {
-      title: 'Rate Limit Middleware with Tirne',
-      description: 'How to start building with rate limit middleware in Tirne, the modern edge-native framework.',
-      url: 'https://tirne.dev/docs/rate-Limit-Middleware',
-    },
-  }
-}
 
 export default function RateLimitMiddlewarePage() {
   return (

@@ -5,7 +5,6 @@ import { CodeBlock } from "../../../components/Document/CodeBlock"
 import { Blockquote } from "../../../components/Document/Blockquote"
 import { Callout } from "../../../components/Document/Callout"
 import React from 'react'
-export const dynamic = 'force-static' // ← 完全SSG指定（Cloudflare向け）
 
 export default function ErrorHandlingPage() {
   return (

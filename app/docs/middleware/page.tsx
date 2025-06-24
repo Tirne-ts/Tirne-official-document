@@ -4,20 +4,7 @@ import { DocSection } from '@/components/Document/ DocSection'
 import { Blockquote } from '@/components/Document/Blockquote'
 import { CodeBlock } from '@/components/Document/CodeBlock'
 import { Callout } from '@/components/Document/Callout'
-export const dynamic = 'force-static' // ← 完全SSG指定（Cloudflare向け）
 
-export async function generateMetadata() {
-  return {
-    title: 'middleware | Tirne',
-    description: 'Learn how to set up and use middleware in Tirne, the zero-boilerplate framework built for Bun, Deno and Workers.',
-    keywords: ['Tirne', 'middleware', 'Bun framework', 'Cloudflare Workers'],
-    openGraph: {
-      title: 'middleware with Tirne',
-      description: 'How to start building with middleware in Tirne, the modern edge-native framework.',
-      url: 'https://tirne.dev/docs/middleware',
-    },
-  }
-}
 
 export default function MiddlewarePage() {
   return (

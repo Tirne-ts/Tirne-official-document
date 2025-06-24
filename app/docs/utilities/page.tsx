@@ -4,7 +4,6 @@ import React from 'react'
 import { DocSection } from "../../../components/Document/ DocSection"
 import { CodeBlock } from "../../../components/Document/CodeBlock"
 import { Blockquote } from "../../../components/Document/Blockquote"
-export const dynamic = 'force-static' // ← 完全SSG指定（Cloudflare向け）
 
 
 

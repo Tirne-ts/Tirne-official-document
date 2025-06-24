@@ -6,7 +6,6 @@ import { Blockquote } from '@/components/Document/Blockquote'
 import { FeatureTable } from '@/components/Document/FeatureTable'
 import { CodeBlock } from '@/components/Document/CodeBlock'
 import { Callout } from '@/components/Document/Callout'
-export const dynamic = 'force-static' // ← 完全SSG指定（Cloudflare向け）
 
 
 export default function IntroductionPage() {
