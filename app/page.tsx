@@ -10,7 +10,7 @@ import { DocSection } from '@/components/Document/ DocSection'
 import { Callout } from '@/components/Document/Callout'
 export async function generateMetadata() {
   return {
-    title: 'Tirne — Bun・Workers対応のZero-Boilerplate Framework',
+    title: 'Tirne — The Edge-Native Framework with Zero Boilerplate',
     description: 'Structure over boilerplate. Tirne is an edge-native web framework built for Bun, Cloudflare Workers, and Deno.',
     keywords: ['tirne', 'bun', 'cloudflare workers', 'Backend Framework', 'zero-boilerplate framework'],
     openGraph: {
